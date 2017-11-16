@@ -1,0 +1,26 @@
+{
+  "name": "@bhmb/server",
+  "version": "0.0.1",
+  "main": "build/extension.js",
+  "license": "MIT",
+  "dependencies": {
+    "@bhmb/bot": "^7.0.7",
+    "express": "^4.16.2"
+  },
+  "devDependencies": {
+    "@bhmb/console": "^1.0.2",
+    "@bhmb/messages": "^1.0.6",
+    "@bhmb/ui": "^1.0.6",
+    "@types/express": "^4.0.39",
+    "rollup": "^0.51.5",
+    "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-string": "^2.0.2",
+    "rollup-plugin-typescript2": "^0.8.0",
+    "tslint": "^5.8.0",
+    "typescript": "^2.6.1"
+  },
+  "scripts": {
+    "build": "rollup --config"
+  }
+}
