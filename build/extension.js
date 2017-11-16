@@ -5,6 +5,8 @@ var bot = require('@bhmb/bot');
 var fs = require('fs');
 
 const express = require('express');
+const serverPort = 8008;
+const serverAddress = 'localhost';
 const jsonParser = bodyParser.json();
 const escapeHtml = (html) => html.replace(/[&<>'"`]/g, ([match]) => ({
     '&': '&amp;',
@@ -103,5 +105,5 @@ bot.MessageBot.registerExtension('@bhmb/server', async (ex) => {
         ex.world.restart();
         res.json({ status: 'OK' });
     });
-    server.listen(8008, 'localhost', () => console.log('Started server on http://localhost:8080/'));
+    server.listen(serverPort, serverAddress, () => console.log(`Started server on http://${serverAddress}:${serverPort}/`));
 });

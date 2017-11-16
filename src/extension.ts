@@ -3,6 +3,9 @@
 import * as core from 'express-serve-static-core'
 const express = require('express') as () => core.Express
 
+const serverPort = 8008
+const serverAddress = 'localhost'
+
 import * as bodyParser from 'body-parser'
 const jsonParser = bodyParser.json()
 import { MessageBot } from '@bhmb/bot'
@@ -116,5 +119,5 @@ MessageBot.registerExtension('@bhmb/server', async ex => {
     res.json({status: 'OK'})
   })
 
-  server.listen(8008, 'localhost', () => console.log('Started server on http://localhost:8080/'))
+  server.listen(serverPort, serverAddress, () => console.log(`Started server on http://${serverAddress}:${serverPort}/`))
 })
